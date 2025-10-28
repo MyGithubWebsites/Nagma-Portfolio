@@ -4,7 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contact — Nagma Pramin</title>
-<link rel="stylesheet" href="style.css">
+<style>
+:root{--bg:#0f1724;--accent:#00d1b2;--muted:#98a0b3;--glass:rgba(255,255,255,0.02);
+--glass-2:rgba(255,255,255,0.03);--radius:14px;--max-width:1100px;font-family:Inter,ui-sans-serif;}
+body{margin:0;background:linear-gradient(180deg,#071120,var(--bg));color:#e6eef6;padding:32px 18px;display:flex;justify-content:center;}
+.container{max-width:var(--max-width);}
+header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:28px;}
+.logo{width:52px;height:52px;background:linear-gradient(135deg,var(--accent),#7cf7d9);border-radius:10px;display:grid;place-items:center;color:#021018;font-weight:700;font-size:22px;}
+a.btn{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;}
+.card{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:20px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.04);}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px;}
+</style>
 </head>
 <body>
 <div class="container">
@@ -14,25 +24,4 @@
     <a class="btn" href="index.html">Home</a>
     <a class="btn" href="experience.html">Experience</a>
     <a class="btn" href="projects.html">Projects</a>
-    <a class="btn" href="skills.html">Skills</a>
-  </nav>
-</header>
-
-<main>
-<section class="card">
-  <h2>Get in Touch</h2>
-  <p>Let's connect for collaborations, freelance work, or public speaking opportunities.</p>
-  <ul>
-    <li><strong>Email:</strong> <a href="mailto:nagmapramin@gmail.com">nagmapramin@gmail.com</a></li>
-    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nagma-b3053b2a8" target="_blank">linkedin.com/in/nagma-b3053b2a8</a></li>
-    <li><strong>Location:</strong> Hyderabad, Telangana, India</li>
-  </ul>
-</section>
-</main>
-
-<footer>© <span id="year"></span> Nagma Pramin</footer>
-</div>
-<script src="script.js"></script>
-</body>
-</html>
-
+   
