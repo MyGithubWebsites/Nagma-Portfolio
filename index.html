@@ -6,33 +6,125 @@
 <title>Nagma Pramin — Portfolio</title>
 <style>
 :root{
-  --bg:#0f1724;--accent:#00d1b2;--muted:#98a0b3;
-  --glass:rgba(255,255,255,0.02);--glass-2:rgba(255,255,255,0.03);
-  --radius:14px;--max-width:1100px;
+  --bg:#0f1724;
+  --accent:#00d1b2;
+  --muted:#98a0b3;
+  --glass:rgba(255,255,255,0.02);
+  --glass-2:rgba(255,255,255,0.03);
+  --radius:14px;
+  --max-width:1100px;
   font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
 }
-*{box-sizing:border-box;}
+*{box-sizing:border-box;margin:0;padding:0;}
 body{
-  margin:0;background:linear-gradient(180deg,#071120 0%,var(--bg) 100%);
-  color:#e6eef6;padding:32px 18px;display:flex;justify-content:center;
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(120deg,#071120,#0f1724,#081526);
+  background-size:400% 400%;
+  animation:gradientMove 18s ease infinite;
+  color:#e6eef6;
+  padding:32px 18px;
+  display:flex;
+  justify-content:center;
+  overflow-x:hidden;
 }
-.container{width:100%;max-width:var(--max-width);}
-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:28px;}
-.brand{display:flex;align-items:center;gap:12px;}
-.logo{width:52px;height:52px;background:linear-gradient(135deg,var(--accent),#7cf7d9);
-  border-radius:10px;display:grid;place-items:center;color:#021018;font-weight:700;
-  font-size:22px;box-shadow:0 6px 20px rgba(0,0,0,0.6);}
-h1{margin:0;font-size:20px;}
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  animation:fadeIn 1.5s ease forwards;
+  opacity:0;
+}
+@keyframes fadeIn{
+  to{opacity:1;transform:none;}
+  from{opacity:0;transform:translateY(20px);}
+}
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;margin-bottom:28px;
+}
+.brand{display:flex;align-items:center;gap:12px;animation:slideDown 1.2s ease;}
+@keyframes slideDown{
+  from{opacity:0;transform:translateY(-20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.logo{
+  width:52px;height:52px;
+  background:linear-gradient(135deg,var(--accent),#7cf7d9);
+  border-radius:10px;display:grid;place-items:center;
+  color:#021018;font-weight:700;font-size:22px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.6);
+  transition:transform .4s ease,box-shadow .4s ease;
+}
+.logo:hover{
+  transform:rotate(10deg) scale(1.1);
+  box-shadow:0 0 25px var(--accent);
+}
+h1{margin:0;font-size:22px;}
 nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
-a.btn{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06);
-  padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;}
-a.btn.primary{background:linear-gradient(90deg,var(--accent),#55f1d0);color:#022;
-  box-shadow:0 10px 30px rgba(0,0,0,0.6);}
-.card{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:20px;
-  border-radius:var(--radius);border:1px solid rgba(255,255,255,0.04);margin-bottom:20px;}
+a.btn{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(255,255,255,0.06);
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  position:relative;
+  overflow:hidden;
+  transition:all .3s ease;
+}
+a.btn:hover{
+  background:rgba(0,209,178,0.15);
+  box-shadow:0 0 12px var(--accent);
+}
+a.btn.primary{
+  background:linear-gradient(90deg,var(--accent),#55f1d0);
+  color:#022;
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+a.btn.primary:hover{
+  box-shadow:0 0 25px var(--accent);
+  transform:translateY(-2px);
+}
+.card{
+  background:linear-gradient(180deg,var(--glass),var(--glass-2));
+  padding:28px;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.04);
+  margin-bottom:20px;
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUp 1.5s ease forwards;
+  animation-delay:.6s;
+  transition:transform .4s ease,box-shadow .4s ease;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 20px rgba(0,209,178,0.3);
+}
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0);}
+}
 .muted{color:var(--muted);}
-footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center;padding:18px 6px;}
-@media(max-width:800px){.logo{width:44px;height:44px;font-size:18px;}}
+footer{
+  margin-top:30px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+  padding:18px 6px;
+  opacity:0;
+  animation:fadeIn 2s ease forwards;
+  animation-delay:1.3s;
+}
+@media(max-width:800px){
+  .logo{width:44px;height:44px;font-size:18px;}
+  h1{font-size:18px;}
+}
 </style>
 </head>
 <body>
@@ -42,7 +134,7 @@ footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center;paddi
     <div class="logo">N</div>
     <div>
       <h1>Nagma Pramin</h1>
-      <div class="muted">LLM & Python Prompt Engineer • Website Developer • Public Speaker</div>
+      <div class="muted">LLM & Python Prompt Engineer • Web Developer • Public Speaker</div>
     </div>
   </div>
   <nav>
@@ -56,12 +148,17 @@ footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center;paddi
 <main>
   <section class="card">
     <h2>About Me</h2>
-    <p>Versatile <strong>LLM & Python Prompt Engineer</strong> with expertise in AI model training, NLP fine-tuning, and Python automation. Proven record in data annotation, web development, and application testing, delivering measurable improvements in performance and user experience. TESOL-certified public speaker recognized for cross-domain impact in AI, technology, and education.</p>
+    <p>
+      I’m <strong>Nagma Pramin</strong>, a versatile <strong>LLM & Python Prompt Engineer</strong> with deep expertise in AI model training, NLP fine-tuning, and intelligent automation.  
+      I specialize in creating seamless digital experiences — from <em>data annotation</em> and <em>web development</em> to <em>AI-based testing</em> — merging logic, design, and storytelling to make technology more human.
+    </p>
   </section>
 </main>
 
 <footer>© <span id="year"></span> Nagma Pramin — Built with passion and precision.</footer>
 </div>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
