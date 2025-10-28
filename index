@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nagma Pramin — Portfolio</title>
+<meta name="description" content="Portfolio of Nagma Pramin — LLM & Python Prompt Engineer, Website Developer, and Public Speaker." />
+<style>
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#00d1b2;
+  --muted:#98a0b3;
+  --glass:rgba(255,255,255,0.02);
+  --glass-2:rgba(255,255,255,0.03);
+  --radius:14px;
+  --max-width:1100px;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#071120 0%,var(--bg) 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:32px 18px;
+  display:flex;
+  justify-content:center;
+}
+.container{width:100%;max-width:var(--max-width);}
+header{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:28px;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.logo{width:52px;height:52px;background:linear-gradient(135deg,var(--accent),#7cf7d9);border-radius:10px;display:grid;place-items:center;color:#021018;font-weight:700;font-size:22px;box-shadow:0 6px 20px rgba(0,0,0,0.6);}
+.brand h1{font-size:20px;margin:0;}
+nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+a.btn{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;}
+a.btn.primary{background:linear-gradient(90deg,var(--accent),#55f1d0);color:#022;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+.card{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:20px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.04);margin-bottom:20px;}
+h2,h3{margin-top:0;}
+.muted{color:var(--muted);}
+ul{padding-left:20px;}
+section{scroll-margin-top:80px;}
+footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center;padding:18px 6px;}
+@media(max-width:800px){
+  .logo{width:44px;height:44px;font-size:18px;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden>N</div>
+      <div>
+        <h1>Nagma Pramin</h1>
+        <div class="muted">LLM & Python Prompt Engineer • Website Developer • Public Speaker</div>
+      </div>
+    </div>
+    <nav>
+      <a class="btn" href="#about">About</a>
+      <a class="btn" href="#experience">Experience</a>
+      <a class="btn" href="#projects">Projects</a>
+      <a class="btn" href="#skills">Skills</a>
+      <a class="btn primary" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Versatile <strong>LLM & Python Prompt Engineer</strong> with expertise in AI model training, NLP fine-tuning, and Python automation. Proven record in data annotation, web development, and application testing, delivering measurable improvements in accuracy, performance, and user experience. TESOL-certified public speaker recognized for cross-domain impact in AI and education.</p>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Professional Experience</h2>
+
+      <h3>Public Relations (PR) Representative — Apex Space Explorations</h3>
+      <p class="muted">Oct 2025 – Present • Remote</p>
+      <ul>
+        <li>Develop and implement PR strategies to enhance brand reputation and media visibility.</li>
+        <li>Create press releases and promotional materials for company initiatives.</li>
+        <li>Manage media relations to ensure positive coverage across platforms.</li>
+      </ul>
+
+      <h3>LLM Prompt Engineer — Telus Digital AI Data Solutions</h3>
+      <p class="muted">Jul 2024 – Present • Remote</p>
+      <ul>
+        <li>Trained AI models on 10,000+ annotated voice datasets, improving recognition accuracy by 15%.</li>
+        <li>Collaborated with ML engineers to fine-tune NLP models for better intent recognition.</li>
+      </ul>
+
+      <h3>Python Prompt Engineer — Outlier AI</h3>
+      <p class="muted">Jan 2022 – Present • Remote</p>
+      <ul>
+        <li>Developed and optimized Python-based prompts and backend code for AI tools and web apps.</li>
+        <li>Reduced debugging time by 25% with modular, efficient code and best practices.</li>
+      </ul>
+
+      <h3>Website Developer — Upwork</h3>
+      <p class="muted">Jan 2022 – Present • Remote</p>
+      <ul>
+        <li>Built 30+ SEO-optimized websites with responsive design and user-centric UX/UI.</li>
+        <li>Integrated Google Analytics and maintained 99.9% uptime across hosting environments.</li>
+      </ul>
+
+      <h3>Public Speaker — Planet Spark</h3>
+      <p class="muted">Oct 2023 – Present • Remote</p>
+      <ul>
+        <li>Conducted 100+ international virtual lessons on grammar, vocabulary, and spoken fluency.</li>
+        <li>Improved learner outcomes by 30% through custom lesson design.</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Highlighted Projects</h2>
+      <ul>
+        <li><strong>Audio Labeling & Transcriber (Uber for Business):</strong> Delivered accurate transcription datasets for AI model training.</li>
+        <li><strong>Application Tester (Google Play Store):</strong> Tested 75+ Android apps, improving app quality scores by 20%.</li>
+        <li><strong>Linguistic Data Annotation (RWS):</strong> Annotated multilingual text, audio, and image data for NLP training.</li>
+        <li><strong>Audiobook Production (ACX Amazon):</strong> Recorded and edited 20+ audiobooks approved for publication.</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Technical:</strong> Python, Java, HTML, JavaScript, MERN Stack, NLP, Web Development, App Testing, API Integration, SEO</li>
+        <li><strong>Tools:</strong> Git/GitHub, Visual Studio Code, Google Analytics, Android Studio, Microsoft Office Suite, Google Workspace</li>
+        <li><strong>Soft Skills:</strong> Communication, Public Speaking, Analytical Thinking, Project Management</li>
+      </ul>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>M.Sc. in Computer Science</strong> — St. Francis College, Hyderabad (2022–2024) — CGPA: 9.6 / 10</li>
+        <li><strong>B.Sc. in Mathematics, Physics, Computer Science</strong> — St. Francis College, Hyderabad (2019–2022) — CGPA: 9.4 / 10</li>
+      </ul>
+    </section>
+
+    <section id="certifications" class="card">
+      <h2>Certifications</h2>
+      <ul>
+        <li>TESOL – Certified English as a Second Language Instructor</li>
+        <li>Data Analysis Certification</li>
+        <li>Java Fundamentals & Cybersecurity Fundamentals</li>
+        <li>Fundamental Algorithms: Design & Analysis</li>
+        <li>CV Writing & Public Speaking Certification</li>
+      </ul>
+    </section>
+
+    <section id="achievements" class="card">
+      <h2>Key Achievements</h2>
+      <ul>
+        <li>Published 75+ gaming apps on Google Play and Amazon App Store.</li>
+        <li>Built 30+ SEO-optimized websites boosting traffic by 60%.</li>
+        <li>Authored <em>“The Art of Deception”</em>, a self-published novel on Amazon.</li>
+        <li>Certified martial artist and 10km marathon runner.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Let’s connect for collaborations, freelance projects, or speaking opportunities.</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:nagmapramin@gmail.com">nagmapramin@gmail.com</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nagma-b3053b2a8" target="_blank">linkedin.com/in/nagma-b3053b2a8</a></li>
+        <li><strong>Location:</strong> Hyderabad, Telangana, India</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Nagma Pramin — Built with passion and precision.
+  </footer>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
