@@ -4,7 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Skills — Nagma Pramin</title>
-<link rel="stylesheet" href="style.css">
+<style>
+:root{--bg:#0f1724;--accent:#00d1b2;--muted:#98a0b3;--glass:rgba(255,255,255,0.02);
+--glass-2:rgba(255,255,255,0.03);--radius:14px;--max-width:1100px;font-family:Inter,ui-sans-serif;}
+body{margin:0;background:linear-gradient(180deg,#071120,var(--bg));color:#e6eef6;padding:32px 18px;display:flex;justify-content:center;}
+.container{max-width:var(--max-width);}
+header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:28px;}
+.logo{width:52px;height:52px;background:linear-gradient(135deg,var(--accent),#7cf7d9);border-radius:10px;display:grid;place-items:center;color:#021018;font-weight:700;font-size:22px;}
+a.btn{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;}
+a.btn.primary{background:linear-gradient(90deg,var(--accent),#55f1d0);color:#022;}
+.card{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:20px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.04);margin-bottom:20px;}
+.muted{color:var(--muted);}ul{padding-left:20px;}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px;}
+</style>
 </head>
 <body>
 <div class="container">
@@ -21,33 +33,22 @@
 <main>
 <section class="card">
   <h2>Technical Skills</h2>
-  <ul>
-    <li>Python, Java, HTML, JavaScript, MERN Stack</li>
-    <li>NLP, Web Development, App Testing, API Integration, SEO</li>
-  </ul>
+  <ul><li>Python, Java, HTML, JavaScript, MERN Stack</li><li>NLP, Web Development, App Testing, API Integration, SEO</li></ul>
 </section>
 
 <section class="card">
   <h2>Tools & Productivity</h2>
-  <ul>
-    <li>Git/GitHub, Visual Studio Code, Google Analytics</li>
-    <li>Android Studio, Microsoft Office, Google Workspace</li>
-  </ul>
+  <ul><li>Git/GitHub, Visual Studio Code, Google Analytics</li><li>Android Studio, Microsoft Office, Google Workspace</li></ul>
 </section>
 
 <section class="card">
   <h2>Soft Skills</h2>
-  <ul>
-    <li>Communication & Public Speaking</li>
-    <li>Analytical Thinking & Problem Solving</li>
-    <li>Project Management & Collaboration</li>
-  </ul>
+  <ul><li>Public Speaking, Communication</li><li>Problem Solving, Project Management, Collaboration</li></ul>
 </section>
 </main>
 
 <footer>© <span id="year"></span> Nagma Pramin</footer>
 </div>
-<script src="script.js"></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
-
